@@ -31,12 +31,13 @@ const lookup = {
   ",": ",",
 };
 
-function rot13(str) {
-	let A = "A".charCodeAt(0);
+    let A = "A".charCodeAt(0);
 	let Z = "Z".charCodeAt(0);
+  function rot13(str) {
+	
 	let res ="";
 	for(let i = 0; i<str.length; i++){
-		let currentChar = str[i].charCodeAt(i);
+		let currentChar = str[i].charCodeAt(0);
 		if(currentChar<=Z && currentChar>=A){
 			res+=lookup[str[i]];
 		}
